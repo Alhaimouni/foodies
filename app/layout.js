@@ -1,5 +1,5 @@
 import './globals.css';
-
+import Link from 'next/link';
 export const metadata = {
   title: 'NextLevel Food',
   description: 'Delicious meals, shared by a food-loving community.',
@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="header-background">
+      <div className="header-background">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -29,7 +29,23 @@ export default function RootLayout({ children }) {
             ></path>
           </svg>
         </div>
-
+        <ul style={{fontWeight:"bolder",display:"flex",gap:"35px",listStyleType:"none"}}>
+          <li >
+          <Link href={"/"}>Home</Link>
+          </li>
+          <li>
+          <Link href={"/meals"}>meals</Link>
+          </li>
+          <li>
+          <Link href={"/meals/share"}>share</Link>
+          </li>
+          <li>
+          <Link href={"/meals/2"}>meals 2</Link>
+          </li>
+          <li>
+          <Link href={"/community"}>community</Link>
+          </li>
+        </ul>
         {children}
       </body>
     </html>
