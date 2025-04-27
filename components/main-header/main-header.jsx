@@ -11,11 +11,7 @@ function MainHeader() {
       <div className={classes.header}>
         <div className={classes.logo}>
           <Link href={"/"}>
-            <Image
-              src={logoImage}
-              alt="this is the logo image."
-              priority
-            />
+            <Image src={logoImage} alt="this is the logo image." priority />
           </Link>
         </div>
         <nav className={classes.nav}>
