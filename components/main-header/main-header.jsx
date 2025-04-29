@@ -3,8 +3,9 @@ import Link from "next/link";
 import HeaderBackground from "./header-background";
 import classes from "./main-header.module.css";
 import Image from "next/image";
+import NavLink from "./navLink";
 
-function MainHeader() {
+export default function MainHeader() {
   return (
     <>
       <HeaderBackground />
@@ -17,10 +18,10 @@ function MainHeader() {
         <nav className={classes.nav}>
           <ul>
             <li>
-              <Link href={"/meals"}>Browse Meals</Link>
+              <NavLink link={"/meals"}>Browse Meals</NavLink>
             </li>
             <li>
-              <Link href={"/community"}>Foodies Community</Link>
+              <NavLink link={"/community"}>Foodies Community</NavLink>
             </li>
           </ul>
         </nav>
@@ -28,5 +29,3 @@ function MainHeader() {
     </>
   );
 }
-
-export default MainHeader;
