@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import classes from "./image-picker.module.css";
 import Image from "next/image";
 
-export default function ImagePicker({ label, name }) {
+export default function  ImagePicker({ label, name }) {
   const inputField = useRef(null);
   const [imgPreview, setImagePreview] = useState();
   function handleClick() {
