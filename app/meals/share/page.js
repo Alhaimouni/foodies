@@ -1,6 +1,9 @@
+"use client";
+
 import ImagePicker from "@/components/image-picker/image-picker";
 import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
+import FormSubmitButton from "@/components/form-submit-button/form-submit-button";
 
 export default function ShareMealPage() {
   return (
@@ -42,9 +45,7 @@ export default function ShareMealPage() {
           </p>
           <ImagePicker label={"Upload your meal NOW!"} name={"image"} />
           <p className={classes.actions}>
-            <button type="submit" className={classes.button}>
-              Share Meal
-            </button>
+            <FormSubmitButton />
           </p>
         </form>
       </main>
