@@ -3,7 +3,6 @@ import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
 
 export default function ShareMealPage() {
-
   return (
     <>
       <header className={classes.header}>
@@ -17,11 +16,11 @@ export default function ShareMealPage() {
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="creator" required />
             </p>
             <p>
               <label htmlFor="email">Your email</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="creator_email" required />
             </p>
           </div>
           <p>
