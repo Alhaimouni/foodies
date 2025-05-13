@@ -4,8 +4,12 @@ import ImagePicker from "@/components/image-picker/image-picker";
 import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
 import FormSubmitButton from "@/components/form-submit-button/form-submit-button";
+import { useFormState } from "react-dom";
 
 export default function ShareMealPage() {
+  const [formState, actionDispatcher] = useFormState(shareMeal, {
+    errMsg: null,
+  });
   return (
     <>
       <header className={classes.header}>
@@ -15,11 +19,16 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form} action={shareMeal}>
+        <form className={classes.form} action={actionDispatcher}>
+          <div className={classes.row}>
+            {formState.errMsg && (
+              <p style={{ color: "red" }}>* {formState.errMsg}</p>
+            )}
+          </div>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
-              <input type="text" id="name" name="creator" required />
+              <input type="text" id="name" name="creator" />
             </p>
             <p>
               <label htmlFor="email">Your email</label>
