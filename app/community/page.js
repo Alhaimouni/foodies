@@ -5,6 +5,12 @@ import communityIcon from "@/assets/icons/community.png";
 import eventsIcon from "@/assets/icons/events.png";
 import classes from "./page.module.css";
 
+
+export const metadata = {
+  title: 'Community',
+  description: 'Join Haimouni foodies community please for more details',
+};
+
 export default function CommunityPage() {
   return (
     <>
